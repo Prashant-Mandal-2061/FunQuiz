@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 100%;
+            height: auto;
+            min-height: 100%;
+            background: linear-gradient(270deg,orange,pink);
+            padding-top: 20px;
+            padding-left: 5px;
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+        .contactInputs{
+            background-color: #fff;
+            padding: 5px;
+            border: none;
+            border-radius: 10px;
+            width: 50%;
+            height: 50px;
+            font-size: 20px;
+        }
+        #submitBtn{
+            padding: 5px;
+            font-size: 20px;
+            color: #fff;
+            background: linear-gradient(250deg,rgb(224, 160, 118),lightgreen);
+            cursor: pointer;
+            transition: .4s;
+            border: none;
+            border-radius: 10px;
+        }
+        #submitBtn:hover{
+            background: linear-gradient(250deg,rgb(212, 226, 80),rgb(144, 238, 202)); 
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+       <form action="https://api.web3forms.com/submit" method="POST" class="info">
+            <input type="hidden" name="access_key" value="62a924ca-2851-44bc-9e7c-16273c20fbfb">
+
+            <input type="text" name="first_name" placeholder="First Name" required class="contactInputs">
+
+            <input type="text" name="middle_name" placeholder="Middle Name (optional)" class="contactInputs">
+
+            <input type="text" name="last_name" placeholder="Last Name" required class="contactInputs">
+
+            <input type="email" name="email" placeholder="E-mail" required class="contactInputs">
+
+           
+
+            <input type="tel"  name="Contact" pattern="[9]{1}[7-8]{1}[0-9]{8}" placeholder="Contact No." class="contactInputs">
+
+            <input type="number" name="GPA" placeholder="Expected GPA" required max="4" min="0" step="0.01" class="contactInputs">
+
+            <label for="Course" class="contactInputs">Choose a Course:</label>
+            <select name="course" id="course" class="contactInputs">
+                <option value="Data Science">Data Science</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Aerospace">Aerospace</option>
+                <option value="B.Sc CSIT">B.Sc CSIT</option>
+                <option value="B.C.A">B.C.A</option>
+                <option value="B.B.A">B.B.A</option>
+                <option value="B.B.S"><B.B.S/option>
+            </select>
+            <button type="submit" id="submitBtn" class="contactInputs">Submit</button>
+       </form>
+    </div>
+</body>
+</html>
